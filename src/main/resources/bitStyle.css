@@ -1,0 +1,338 @@
+<style>
+.bottom-left {
+  position: absolute;
+  bottom: 8px;
+  left: 16px;
+}
+
+.bottom-right {
+  position: absolute;
+  bottom: 8px;
+  right: 16px;
+}
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-family:    Arial, Helvetica, sans-serif;
+                font-size:      60px;
+                font-weight:    bold;
+  transform: translate(-50%, -50%);
+}
+
+@media screen and (max-width: 3000px) {
+  .mySlides{
+    min-height: auto;
+    max-height: 640px;
+	width:100%
+   }
+	.modal-content {
+	  background-color: #fefefe;
+	  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+	  border: 1px solid #888;
+	  width: 40%; /* Could be more or less, depending on screen size */
+	}
+	.sign {
+	  position: absolute;
+	  top: 5%;
+	  right: 5%;
+	  font-family:    Arial, Helvetica, sans-serif;
+					font-size:      16px;
+					font-weight:    bold;
+					
+	}
+	.bitkalp{
+	  position: absolute;
+	  top: 2%;
+	  left: 3%;
+	  color:gray;
+	  background-color: red;
+	  color: white;
+	  padding: 10px 13px;
+	  margin: 8px 0;
+	  border-radius: 20px;	
+	  text-shadow: 2px 2px 5px green;
+		font-family:    Arial, Helvetica, sans-serif;
+		  font-size:      240%;          
+					
+	}
+	.search {
+	  position: absolute;
+	  top: 5%;
+	  left: 50%;
+	  color:gray;
+	margin:auto;width:40%;
+		font-family:    Arial, Helvetica, sans-serif;
+					font-size:      40px;
+	  transform: translate(-50%,0%);              
+	  
+	}
+	/* Set a style for all buttons */
+	.SignInbutton {
+	  background-color: #4CAF50;
+	  color: white;
+	  padding: 14px 20px;
+	  margin: 8px 0;
+	  border: none;
+	  cursor: pointer;
+	  width: 100%;
+	}
+	form.example input[type=text] {
+	  padding: 10px;
+	  font-size: 17px;
+	  border: 1px solid grey;
+	  float: left;
+	  width: 92%;
+	  background: #f1f1f1;
+		  border-radius: 25px;
+	}
+
+	form.example button {
+	  float: left;
+	  width: 8%;
+	  padding: 10px;
+	  background: #2196F3;
+	  color: white;
+	  font-size: 17px;
+	  border: 1px solid grey;
+	  border-left: none;
+	  cursor: pointer;
+		  border-radius: 25px;
+	}
+
+}
+@media screen and (max-width: 800px) {
+  .mySlides{
+    min-height: auto;
+    height: 320px;
+   
+	}
+	.modal-content {
+	  background-color: #fefefe;
+	  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+	  border: 1px solid #888;
+	  width: 80%; /* Could be more or less, depending on screen size */
+	}
+	.sign {
+	  position: absolute;
+	  bottom:5%;
+	  
+	  font-family:    Arial, Helvetica, sans-serif;
+					font-size:     100%;;
+					
+	
+					
+	}
+	.bitkalp{
+	  position: absolute;
+	  top: 0%;
+	  left: 1%;
+	  color:gray;
+	  background-color: red;
+	  color: white;
+	  padding: 4px 5px;
+	  margin: 8px 0;
+	  text-shadow: 2px 2px 5px green;
+		font-family:    Arial, Helvetica, sans-serif;
+		  font-size:      100%;          
+			          
+			border-radius: 8px;		
+	}
+	.search {
+	  position: absolute;
+	  top: 16%;
+		width:80%;
+	  color:gray;
+	
+		font-family:    Arial, Helvetica, sans-serif;
+					font-size:      24px;
+             
+	  
+	}
+	.sign {
+	  position: absolute;
+	  top: 1%;
+	  right: 2%;
+	  font-family:    Arial, Helvetica, sans-serif;
+					font-size:      10px;
+					
+					
+	}
+	/* Set a style for all buttons */
+	.SignInbutton {
+	  background-color: #4CAF50;
+	  color: white;
+	  padding: 4px 5px;
+	  margin: 8px 0;
+	  border: none;
+	  cursor: pointer;
+	  width: 100%;
+	}
+	form.example input[type=text] {
+	  padding: 10px;
+	  font-size: 12px;
+	  border: 1px solid grey;
+	  float: left;
+	  width: 80%;
+	  background: #f1f1f1;
+		  border-radius: 12px;
+	}
+
+	form.example button {
+	  float: left;
+	  width: 20%;
+	  padding: 10px;
+	  background: #2196F3;
+	  color: white;
+	  font-size: 12px;
+	  border: 1px solid grey;
+	  border-left: none;
+	  cursor: pointer;
+		  border-radius: 12px;
+	}
+
+}
+.project{
+	box-shadow: 10px 10px 5px grey;
+}
+* {
+  box-sizing: border-box;
+}
+
+
+
+form.example button:hover {
+  background: #0b7dda;
+}
+
+form.example::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+.round {
+    width: 100%;
+    border-radius: 5px;
+    border: 1px #000 solid;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 5;
+}
+
+.inputSignIn {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+.signIncontainer {
+  padding: 16px;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+
+/* Center the image and position the close button */
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+  position: relative;
+}
+
+img.avatar {
+  width: 40%;
+  border-radius: 50%;
+}
+
+
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  padding-top: 5px;
+}
+
+/* Modal Content/Box */
+
+/* The Close Button (x) */
+.close {
+  position: absolute;
+  right: 25px;
+  top: 0;
+  color: #000;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: red;
+  cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+  from {-webkit-transform: scale(0)} 
+  to {-webkit-transform: scale(1)}
+}
+  
+@keyframes animatezoom {
+  from {transform: scale(0)} 
+  to {transform: scale(1)}
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+     display: block;
+     float: none;
+  }
+  .cancelbtn {
+     width: 100%;
+  }
+}
+.w3-content,.w3-auto{margin-left:auto;margin-right:auto}
+/*.w3-content{max-width:980px}
+
+.w3-display-container:hover
+.w3-display-hover{display:block}
+.w3-display-container:hover span.w3-display-hover{display:inline-block}
+.w3-display-hover{display:none}
+
+.w3-display-container{position:relative}
+.w3-display-container:hover .w3-display-hover{display:block}
+.w3-display-container:hover span.w3-display-hover{display:inline-block}.w3-display-hover{display:none}*/
+
+</style>
